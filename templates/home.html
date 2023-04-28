@@ -1,0 +1,49 @@
+<html>
+   <body>
+      <form action = "{{ url_for('predict')}}" method = "POST"
+         enctype = "multipart/form-data">
+	      <title>Предсказание стоимости недвижимости в Москве</title>
+         <div class="form-group  purple-border">
+				  <label for="comment">Общая площадь, кв. м:</label>
+				  <textarea class="form-control" rows="2" id="query1" name="query1" rows="2" cols="5" autofocus>{{query1}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Жилая площадь, кв. м:</label>
+				  <textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5" autofocus>{{query2}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Площадь кухни, кв. м:</label>
+				  <textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5" autofocus>{{query3}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Расстояние от центра, км:</label>
+				  <textarea class="form-control" rows="2" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Расстояние до метро, мин:</label>
+				  <textarea class="form-control" rows="2" id="query5" name="query5" rows="2" cols="5" autofocus>{{query5}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">1 – пешком от метро, 0 – на транспорте:</label>
+				  <textarea class="form-control" rows="2" id="query6" name="query6" rows="2" cols="5" autofocus>{{query6}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">1 – кирпичный, монолит ж/б, 0 – другой:</label>
+				  <textarea class="form-control" rows="2" id="query7" name="query7" rows="2" cols="5" autofocus>{{query7}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">1 – этаж кроме первого и последнего, 0 – иначе.:</label>
+				  <textarea class="form-control" rows="2" id="query8" name="query8" rows="2" cols="5" autofocus>{{query8}}</textarea>
+			</div>
+         <div class="form-group  purple-border">
+				  <label for="comment">Код района Москвы (от 1 до 8):</label>
+				  <textarea class="form-control" rows="2" id="query9" name="query9" rows="2" cols="5" autofocus>{{query9}}</textarea>
+			</div>
+         <div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">Предсказать стоимость</button>
+			</div>
+         <br>
+         <textarea class="form-control" rows="2" id="comment" name="query10" rows="2" cols="5" autofocus>{{output1}}</textarea>
+      </form>
+   </body>
+</html>
