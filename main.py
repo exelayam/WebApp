@@ -17,6 +17,7 @@ app = Flask('__name__')
 q = ""
 
 
+@app.route("/")
 @app.route("/apartprice")
 def loadPage():
     return render_template('home.html', query="")
